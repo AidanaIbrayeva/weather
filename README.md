@@ -5,7 +5,8 @@ Install dependencies npm i
 Run the server usign node server.js
 Used npm dependencies
 express - easy and fast js framework
-nodemon - automatically restarts the node application when file changes (developers dependency)
+pat
+body-parser
 Used APIs and Libraries
 Google Fonts CSS - fonts
 Bootstrap 5 CSS - css framework
