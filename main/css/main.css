@@ -1,0 +1,382 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #ededed, #cdceca);
+  color: #fff;
+  padding-top: 5rem;
+}
+
+.articles {
+  position: relative;
+    top: 200%;
+}
+
+
+p {
+  color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+:root {
+    --winter: #6db4ce; /* Голубой для зимы */
+    --colorWinter: #021f66; /* Темно-синий для текста зимой */
+    --summer: #92e5de; /* Бирюзовый для лета */
+    --summerColor: #000000;
+    --border_radius: 8px;
+    --headerBackgroundColor: #7d7878; /* Серый для фона шапки */
+    --noteBorderColor: #F39C12; 
+    --loadingBackground: #34495e; /* Темно-серый для фона загрузки */
+}
+
+.navigation {
+  position: absolute;
+  height: 10%;
+  left: 0%;
+  width: 100vw;
+  z-index: 101;
+  border: solid var(--headerBackgroundColor) 1px;
+  background: linear-gradient(to right, #f6b4e3, #dff695); /* Set your desired gradient */
+  box-shadow: 1px 1px 2px 1px black;
+  top: 3.5%;
+}
+
+
+.navigation input {
+    position: absolute;
+    width: 15%;
+    top: 3.5%; /* Adjusted to match the news button */
+    left: 70%;
+}
+
+.navigation button {
+    position: absolute;
+    top: 3.5%; /* Adjusted to match the news button */
+    left: 85%;
+}
+
+.newsBtn {
+    position: absolute;
+    top: 3.5%;
+    background: #63b1ff; 
+    border: solid #000 1px;
+    left: 54%;
+    z-index: 10001;
+    padding: 5px;
+    border-radius: 8px;
+    width: 15%;
+    transition: 0.5s ease;
+    color: #fff;
+}
+
+.newsBtn:hover {
+    background-color: #000;
+    color: #63b1ff;
+}
+
+
+.showTheNameOfCity {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    font-size: 18px;
+}
+
+/* Add these styles to your existing CSS or create a new CSS file */
+
+#weather-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.weather-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.weather-day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px;
+  width: 45%; 
+}
+
+.weather-day p {
+  margin: 5px 0;
+}
+
+
+
+
+.table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.header {
+    position: absolute;
+    left: 9%;
+    top: 18%;
+    z-index: 100;
+    width: 20%;
+    height: 20%;
+    padding: 4px;
+    border-radius: var(--border_radius);
+}
+
+.winterStyle {
+    background-color: var(--winter);
+    color: var(--colorWinter);
+}
+
+.temparature {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.definition {
+    font-size: 20px;
+}
+
+.min_and_maxTemp {
+    top: 65%;
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    width: 150%;
+}
+
+.feels_like {
+    position: absolute;
+    top: 60%;
+    left: 68vw;
+    width: 100%;
+    font-size: 20px;
+}
+
+.humidity {
+    position: relative;
+    left: 2%;
+    font-size: 17px;
+}
+
+.pressureIcon {
+    position: relative;
+    left: 10%;
+}
+
+.pressure {
+    position: relative;
+    left: 12%;
+    font-size: 17px;
+}
+
+.windSpeedIcon {
+    position: relative;
+    left: 18%;
+}
+
+.windSpeedText {
+    position: relative;
+    left: 21%;
+    font-size: 17px;
+}
+
+.countryCode {
+    position: relative;
+    left: 25%;
+}
+
+.countryCodeText {
+    position: relative;
+    top: 93%;
+    left: 27%;
+}
+
+#weather-data {
+    width: 170%;
+}
+
+#weather-data img {
+    position: relative;
+    width: 9%;
+    object-fit: cover;
+}
+
+.additionalInformation {
+    position: absolute;
+    top: 15%;
+    left: 0;
+}
+
+.additionalInformation img {
+    position: relative;
+    left: 77vw;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#map {
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 100%;
+    height: 75%;
+    border-radius: 8px;
+}
+
+.noteForUser {
+    position: absolute;
+    top: 53%;
+    border: solid var(--noteBorderColor) 1px;
+    width: 80vw;
+    padding: 15px;
+    border-radius: 8px;
+    left: 9%;
+}
+
+.noteForUser span {
+    position: relative;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.noteForUser span.extraText {
+    margin-top: 10px;
+    display: block;
+}
+
+.loading {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--loadingBackground);
+    z-index: 110000;
+}
+
+.loader {
+    position: absolute;
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    z-index: 110000;
+    left: 50%;
+    top: 30%;
+    font-size: 15px;
+}
+
+.loader:before,
+.loader:after {
+    z-index: 110000;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+
+.loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateZ(720deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-720deg);
+    }
+}
+
+@keyframes spin {
+    0%,
+    100% {
+        box-shadow: 0.2em 0px 0 0px #ff69b4;
+    }
+    25% {
+        box-shadow: 0.2em 0.2em 0 0 #ff69b4;
+    }
+    50% {
+        box-shadow: 0 0.2em 0 0px #ff69b4;
+    }
+    75% {
+        box-shadow: -0.2em 0.2em 0 0 #ff69b4;
+    }
+    100% {
+        box-shadow: -0.2em 0 0 0 #ff69b4;
+    }
+}
+
+
+.newsBtn {
+    position: absolute;
+    top: 3.5%;
+    background: #63b1ff;
+    border: solid #000 1px;
+    left: 0%;
+    z-index: 10001;
+    padding: 5px;
+    border-radius: 8px;
+    width: 15%;
+    left: 54%;
+    transition: 0.5s ease;
+    color: #fff;
+}
+
+.newsBtn:hover {
+    background-color: #000;
+    color: #63b1ff;
+}
+
+.additionalInfo {
+    position: absolute;
+    top: 155%;
+}
